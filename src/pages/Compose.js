@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import MainNav from "../components/MainNav";
 import SideNav from "../components/SideNav";
 import { useState } from "react";
-import { confirmAlert } from 'react-confirm-alert'; // Import
+import { confirmAlert } from 'react-confirm-alert'; 
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./Compose.css";
@@ -74,7 +74,7 @@ function Compose() {
             <Form.Label>To:</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter email"
+              placeholder="Enter your recipent's email"
               className="form-control form-control-sm"
               value={to}
               onChange={handleToChange}
@@ -86,7 +86,7 @@ function Compose() {
             <Form.Label>Subject:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="subject"
+              placeholder="Enter Your subject"
               className="form-control form-control-sm"
               value={sub}
               onChange={handleSubChange}
@@ -99,6 +99,7 @@ function Compose() {
         <Form.Control
          as="textarea" 
          rows={4}
+         placeholder="Enter your description"
          value={content}
          onChange={handleContentChange}
          required
@@ -107,7 +108,7 @@ function Compose() {
     </Form>
 
           <div className="text-center">
-          <Button variant="success"   type="submit" >
+          <Button variant="success" className="btn-sm"   type="submit" >
         Sent 
       </Button>
 
